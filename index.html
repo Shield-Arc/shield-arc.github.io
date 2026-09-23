@@ -3,108 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perimeter - Shield Arc</title>
-    <meta name="description" content="Perimeter, a thrilling new game from Shield Arc. Defend, upgrade, and survive in this deep sci-fi experience.">
+    <title>Perimeter — Tower Defense &amp; Factory Building Game | Shield Arc</title>
+    <meta name="description" content="Perimeter is a sci-fi mobile game where you defend your tower against endless alien waves, build automated factories, research new tech, and collect powerful gear. Free on Google Play.">
+    <meta name="keywords" content="Perimeter, tower defense, factory automation, sci-fi game, Shield Arc, mobile game, Google Play, Android game, indie game">
+    <meta name="theme-color" content="#07020d">
+
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shieldarc.com/">
+    <meta property="og:title" content="Perimeter — Tower Defense &amp; Factory Building Game">
+    <meta property="og:description" content="Defend your tower against waves of aliens, build conveyor-belt factories, research super weapons, and collect gear with unique skills. Free on Google Play.">
+    <meta property="og:image" content="assets/Feature_Graphic_1024x500.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Perimeter — Tower Defense &amp; Factory Building Game">
+    <meta property="twitter:description" content="Defend your tower against waves of aliens, build conveyor-belt factories, research super weapons, and collect gear with unique skills. Free on Google Play.">
+    <meta property="twitter:image" content="assets/Feature_Graphic_1024x500.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/LOGO_512.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-animation"></div>
-    <header class="navbar">
+    <!-- Ambient Background Effects -->
+    <div class="background-animation" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="top">
         <div class="nav-content">
-            <img src="shieldArc1080.png" alt="Shield Arc Logo" class="nav-logo">
-            <h1 class="nav-title">Shield Arc</h1>
-            <a href="https://play.google.com/store/apps/details?id=com.shieldarc.perimeter" class="nav-cta" target="_blank">Get Perimeter</a>
+            <a href="#top" class="nav-brand">
+                <img src="shieldArc1080.png" alt="Shield Arc Logo" class="nav-logo">
+                <span class="nav-title">Shield Arc</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+                <a href="#trailer" class="nav-link">Trailer</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.shieldarc.perimeter" class="nav-cta" target="_blank" rel="noopener">
+                    <svg class="google-play-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M3.609 1.814L13.792 12 3.61 22.186c-.378-.363-.61-.88-.61-1.464V3.278c0-.584.232-1.101.61-1.464zM15.207 13.414l2.428 2.428-11.758 6.72 9.33-9.148zm0-2.828L5.877 1.438l11.758 6.72-2.428 2.428zm1.414 1.414l3.197-3.197c.435-.435.682-1.026.682-1.643s-.247-1.208-.682-1.643L16.621 12l3.197 3.197c.435-.435.682-1.026.682-1.643s-.247-1.208-.682-1.643l-3.197-3.197z"/>
+                    </svg>
+                    <span>Get Perimeter</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-toggle" aria-label="Toggle navigation menu" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content glass-panel">
-                <img src="assets/LOGO_512.png" alt="Perimeter Logo" class="hero-game-logo">
-                <h1 class="sr-only">Perimeter</h1>
-                <p class="game-subtitle">Defend. Upgrade. Survive.</p>
-                <p class="game-description">Take control of your defenses in Perimeter, a thrilling sci-fi arcade experience. Defend against endless waves of aliens, build your own factory to optimize production, and upgrade your tower almost infinitely to hold the line!</p>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">FREE TO PLAY</span>
+                </div>
+
+                <div class="logo-wrapper">
+                    <img src="assets/LOGO_512.png" alt="Perimeter Game Logo" class="hero-game-logo">
+                    <h1 class="sr-only">Perimeter</h1>
+                </div>
+
+                <p class="game-subtitle">Defend. Build. Upgrade. Repeat.</p>
+                
+                <p class="game-description">
+                    Defend your tower against endless waves of aliens, build a full factory with conveyor belts and assembly lines, research powerful tech upgrades, and equip gear with unique combat skills. How far can you push across 9 sectors?
+                </p>
+
                 <div class="hero-actions">
-                    <a href="https://play.google.com/store/apps/details?id=com.shieldarc.perimeter" class="btn btn-primary" target="_blank">Download on Google Play</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.shieldarc.perimeter" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M3.609 1.814L13.792 12 3.61 22.186c-.378-.363-.61-.88-.61-1.464V3.278c0-.584.232-1.101.61-1.464zM15.207 13.414l2.428 2.428-11.758 6.72 9.33-9.148zm0-2.828L5.877 1.438l11.758 6.72-2.428 2.428zm1.414 1.414l3.197-3.197c.435-.435.682-1.026.682-1.643s-.247-1.208-.682-1.643L16.621 12l3.197 3.197c.435-.435.682-1.026.682-1.643s-.247-1.208-.682-1.643l-3.197-3.197z"/>
+                        </svg>
+                        <span>Download on Google Play</span>
+                    </a>
+                    <a href="#trailer" class="btn btn-secondary">
+                        <svg class="btn-icon play-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        <span>Watch Trailer</span>
+                    </a>
+                </div>
+
+                <!-- Live Game Stat Badges -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Sectors</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">39</span>
+                        <span class="stat-label">Buildings</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Tech Eras</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Upgrades</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">18</span>
+                        <span class="stat-label">Unique Skills</span>
+                    </div>
                 </div>
             </div>
+
             <div class="hero-image-wrapper">
-                <img src="assets/perimeter.png" alt="Perimeter Banner" class="hero-image">
+                <div class="hero-image-glow"></div>
+                <img src="assets/perimeter.png" alt="Perimeter Gameplay Banner" class="hero-image">
             </div>
         </section>
 
-        <section class="features">
-            <h2 class="section-title">Game Features</h2>
+        <!-- Official Trailer Section -->
+        <section class="trailer-section" id="trailer">
+            <div class="section-header">
+                <span class="section-tag">OFFICIAL TRAILER</span>
+                <h2 class="section-title">See the Game in Action</h2>
+                <p class="section-subtitle">Watch gameplay footage showing tower combat, factory building, and super weapon attacks.</p>
+            </div>
+
+            <div class="trailer-container glass-panel">
+                <div class="video-ambient-glow"></div>
+                <div class="trailer-meta">
+                    <div class="trailer-info">
+                        <span class="trailer-badge">TRAILER</span>
+                        <span class="trailer-text">Official Perimeter Trailer</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=S7LjdiKcKpY" target="_blank" rel="noopener" class="youtube-direct-link">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <span>Open on YouTube</span>
+                    </a>
+                </div>
+                <div class="video-wrapper" id="videoWrapper">
+                    <div class="video-poster" id="videoPoster">
+                        <img src="assets/Feature_Graphic_1024x500.png" alt="Perimeter Trailer" class="poster-img" />
+                        <div class="poster-overlay">
+                            <button class="play-trigger" id="playTrailerBtn" aria-label="Play Perimeter Trailer">
+                                <div class="play-icon-box">
+                                    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                                        <polygon points="6,3 20,12 6,21"></polygon>
+                                    </svg>
+                                </div>
+                                <div class="play-pulse"></div>
+                            </button>
+                            <span class="play-text">WATCH TRAILER</span>
+                        </div>
+                    </div>
+                    <div id="videoEmbedContainer"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Gameplay Pillars -->
+        <section class="features" id="features">
+            <div class="section-header">
+                <span class="section-tag">CORE GAMEPLAY</span>
+                <h2 class="section-title">What's Inside Perimeter</h2>
+                <p class="section-subtitle">Defend your core against relentless waves, automate resource supply lines, and craft powerful gear to conquer hostile sectors.</p>
+            </div>
+
             <div class="feature-grid">
+                <!-- Card 1: Sector Defense -->
                 <div class="feature-card glass-panel">
-                    <img src="assets/Game1.png" alt="Gameplay" class="feature-img">
-                    <h3>Defend the Perimeter</h3>
-                    <p>Defend against waves of aliens and upgrade your tower almost infinitely! Build turrets to hold the line.</p>
+                    <div class="feature-card-header">
+                        <span class="feature-badge">Sector Defense</span>
+                        <div class="feature-img-wrapper">
+                            <img src="assets/Game1.png" alt="Sector Combat Gameplay" class="feature-img" loading="lazy" style="object-position: center 42.5%;">
+                        </div>
+                    </div>
+                    <h3>9 Sectors &amp; Endless Waves</h3>
+                    <p>Push through 9 increasingly difficult sectors, each with tougher enemies and bigger bosses. Survive as long as you can!</p>
                 </div>
+
+                <!-- Card 2: Factory Automation -->
                 <div class="feature-card glass-panel">
-                    <img src="assets/Factory2.png" alt="Factory Upgrades" class="feature-img">
-                    <h3>Build Your Factory</h3>
-                    <p>Connect transport belts, plan assembly lines, manage energy production, and optimize your overall output!</p>
+                    <div class="feature-card-header">
+                        <span class="feature-badge">Automation</span>
+                        <div class="feature-img-wrapper">
+                            <img src="assets/Factory2.png" alt="Industrial Factory Grid" class="feature-img" loading="lazy">
+                        </div>
+                    </div>
+                    <h3>Industrial Factory Automation</h3>
+                    <p>Place conveyor belts, build drills, furnaces, and assemblers. Construct 39 distinct factory structures across multiple tiers to craft advanced components and power your defenses.</p>
                 </div>
+
+                <!-- Card 3: Deep Tech Tree -->
                 <div class="feature-card glass-panel">
-                    <img src="assets/ResearchTree.png" alt="Research Tree" class="feature-img">
-                    <h3>Research Technologies</h3>
-                    <p>Unlock new technologies to enhance your power and purchase super weapons for ultimate survivability.</p>
+                    <div class="feature-card-header">
+                        <span class="feature-badge">Research Lab</span>
+                        <div class="feature-img-wrapper">
+                            <img src="assets/ResearchTree.png" alt="Laboratory Research Tech Tree" class="feature-img" loading="lazy" style="object-position: center 55%;">
+                        </div>
+                    </div>
+                    <h3>30+ Upgrades &amp; Lab Research</h3>
+                    <p>Spend scrap on permanent tower upgrades for damage, health, and range. Research advanced industrial tech in the lab using factory components to unlock game-changing bonuses and super weapon upgrades.</p>
                 </div>
+
+                <!-- Card 4: Equipment & Recycling -->
                 <div class="feature-card glass-panel">
-                    <img src="assets/PowerCards.png" alt="Power Cards" class="feature-img">
-                    <h3>Power Cards & Skills</h3>
-                    <p>Get unique items with distinct skills and scale up your base power using a vast array of Power Cards.</p>
+                    <div class="feature-card-header">
+                        <span class="feature-badge">Equipment</span>
+                        <div class="feature-img-wrapper">
+                            <img src="assets/Items.png" alt="Modular Equipment and Gear" class="feature-img" loading="lazy" style="object-position: center 75%;">
+                        </div>
+                    </div>
+                    <h3>Legendary Gear &amp; Unique Skills</h3>
+                    <p>Equip items across 4 gear slots (Weapon, Armor, Relic, Enhancer), each with unique combat skills — shockwaves, chain lightning, healing pulses, and more.</p>
+                </div>
+
+                <!-- Card 5: Power Cards -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-card-header">
+                        <span class="feature-badge">Deckbuilding</span>
+                        <div class="feature-img-wrapper">
+                            <img src="assets/PowerCards.png" alt="Tactical Power Cards" class="feature-img" loading="lazy" style="object-position: center 60%;">
+                        </div>
+                    </div>
+                    <h3>Tactical Power Cards</h3>
+                    <p>Unlock up to 6 active card slots and equip powerful tactical cards from a collection of 10 to boost your attack speed, damage, and shields.</p>
+                </div>
+
+                <!-- Card 6: Cosmetics & Dynamic Lighting -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-card-header">
+                        <span class="feature-badge">Visuals &amp; QoL</span>
+                        <div class="feature-img-wrapper">
+                            <img src="assets/ScreensScreen_0.png" alt="Tower Skins and Themes" class="feature-img" loading="lazy" style="object-position: center 41%;">
+                        </div>
+                    </div>
+                    <h3>Dynamic Lighting &amp; Skins</h3>
+                    <p>Unlock tower skins with custom explosion effects and particle trails. Play in No-GUI mode for a clean look, or enable Battery Saver to keep your phone cool during long runs.</p>
                 </div>
             </div>
         </section>
 
-        <section class="gallery">
-            <h2 class="section-title">Gallery</h2>
+        <!-- Interactive Screenshot Gallery -->
+        <section class="gallery" id="gallery">
+            <div class="section-header">
+                <span class="section-tag">GALLERY</span>
+                <h2 class="section-title">Screenshots &amp; Visuals</h2>
+                <p class="section-subtitle">Screenshots from the game showing combat, factory building, research, and items.</p>
+            </div>
+
             <div class="carousel-container">
-                <button class="carousel-btn prev" aria-label="Previous image">&#10094;</button>
-                <div class="carousel-track">
-                    <img src="assets/perimSS1.png" alt="Screenshot 1" class="carousel-item active">
-                    <img src="assets/perimSS2.png" alt="Screenshot 2" class="carousel-item">
-                    <img src="assets/perimSSFactory.png" alt="Factory Screenshot" class="carousel-item">
-                    <img src="assets/ResearchTree.png" alt="Research Tree" class="carousel-item">
-                    <img src="assets/Items.png" alt="Items" class="carousel-item">
-                    <img src="assets/ScreensScreen_0.png" alt="Screens Screen" class="carousel-item">
+                <button class="carousel-btn prev" aria-label="Previous screenshot" id="prevBtn">&#10094;</button>
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="assets/perimSS1.png" alt="Perimeter Combat Defense Screenshot" class="carousel-img" loading="lazy">
+                        <div class="slide-caption">Wave Defense Gameplay</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/perimSS2.png" alt="Upgraded Tower Defense" class="carousel-img" loading="lazy">
+                        <div class="slide-caption">Tower &amp; Super Weapons</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/perimSSFactory.png" alt="Conveyor Assembly Logistics" class="carousel-img" loading="lazy">
+                        <div class="slide-caption">Factory Building</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/ResearchTree.png" alt="Laboratory Tech Research" class="carousel-img" loading="lazy">
+                        <div class="slide-caption">Tech Tree &amp; Lab Research</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/Items.png" alt="Legendary Equipment &amp; Skills" class="carousel-img" loading="lazy">
+                        <div class="slide-caption">Equipment &amp; Gear</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/ScreensScreen_0.png" alt="Tower Skins and Holographic Themes" class="carousel-img" loading="lazy">
+                        <div class="slide-caption">Tower Skins &amp; Effects</div>
+                    </div>
                 </div>
-                <button class="carousel-btn next" aria-label="Next image">&#10095;</button>
+                <button class="carousel-btn next" aria-label="Next screenshot" id="nextBtn">&#10095;</button>
             </div>
+
+            <!-- Carousel Dot Indicators -->
+            <div class="carousel-dots" id="carouselDots" aria-label="Carousel pagination"></div>
         </section>
 
-        <section class="roadmap">
-            <h2 class="section-title">Roadmap</h2>
-            <div class="roadmap-content glass-panel">
-                <ul class="roadmap-list">
-                    <li>More Upgrades & Lab researches</li>
-                    <li>More skins & backgrounds</li>
-                    <li>No GUI and Battery Saving modes</li>
-                    <li>Events section to provide "permanently" purchasable events (with in-game currency) so that you don't have to complete them in a limited time</li>
-                    <li>Even more Factory Turrets and Buildings</li>
-                </ul>
+        <!-- Download CTA Banner -->
+        <section class="download-banner">
+            <div class="banner-content glass-panel">
+                <div class="banner-text">
+                    <h2>Ready to Defend the Perimeter?</h2>
+                    <p>Perimeter is free on Google Play. Jump in, build your factory, and see how far you can go.</p>
+                </div>
+                <div class="banner-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.shieldarc.perimeter" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M3.609 1.814L13.792 12 3.61 22.186c-.378-.363-.61-.88-.61-1.464V3.278c0-.584.232-1.101.61-1.464zM15.207 13.414l2.428 2.428-11.758 6.72 9.33-9.148zm0-2.828L5.877 1.438l11.758 6.72-2.428 2.428zm1.414 1.414l3.197-3.197c.435-.435.682-1.026.682-1.643s-.247-1.208-.682-1.643L16.621 12l3.197 3.197c.435-.435.682-1.026.682-1.643s-.247-1.208-.682-1.643l-3.197-3.197z"/>
+                        </svg>
+                        <span>Download Free on Google Play</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <img src="shieldArc1080.png" alt="Shield Arc" class="small-logo">
-                <span>&copy; 2026 Shield Arc. All rights reserved.</span>
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="shieldArc1080.png" alt="Shield Arc Studio Logo" class="small-logo">
+                    <span class="footer-title">Shield Arc</span>
+                </div>
+                <p class="footer-tagline">Indie game studio making PC &amp; Mobile games.</p>
+                <p class="copyright">&copy; 2026 Shield Arc. All rights reserved.</p>
             </div>
-            <div class="footer-links">
-                <a href="https://discord.gg/dzpsaGjPqs" target="_blank">Discord</a>
-                <a href="https://x.com/Shield_Arc" target="_blank">X (Twitter)</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="mailto:shieldarcofficial@gmail.com">Contact</a>
+
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <span class="footer-heading">Game</span>
+                    <a href="#trailer">Trailer</a>
+                    <a href="#features">Features</a>
+                    <a href="#gallery">Screenshots</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-heading">Store &amp; Legal</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.shieldarc.perimeter" target="_blank" rel="noopener">Google Play Store</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Modern Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
